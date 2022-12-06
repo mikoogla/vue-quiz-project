@@ -46,13 +46,15 @@
 44. router meta
 45. views - folders used by router
 46. components transition
-    [ ]47. components transition group
-    [ ]48. components transition with v-if
-    [ ]49. routes animations
-    [ ]50. store
+47. components transition group
+48. components transition with v-if
+49. routes animations
+50. store
+
     51.1 getters
     51.2 mutations
     51.3 actions
     51.4 modules
     51.5 namespaced
-    ~~52 strikedown~~
+
+51. strikedown
