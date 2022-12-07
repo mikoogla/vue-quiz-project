@@ -15,7 +15,7 @@ import Navbar from "./components/Navbar.vue";
     </main>
   </div>
   <footer>
-    <p>Copyright 2022</p>
+    <p>Copyright mikoogla 2022</p>
   </footer>
 </template>
 

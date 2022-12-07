@@ -20,6 +20,7 @@ li {
   margin: 0px 10px;
 }
 .main {
+  overflow: hidden;
   width: 100%;
   max-height: 4rem;
   background-color: var(--background-color);
