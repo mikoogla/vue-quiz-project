@@ -2,7 +2,9 @@
 
 <template>
   <div class="testitem">
-    <slot>No name</slot>
+    <div class="text">
+      <slot>No name</slot>
+    </div>
   </div>
 </template>
 
@@ -15,7 +17,7 @@
   border-bottom: 1px solid #5e8aa7;
   border-radius: 0px 0px 15px 15px;
   color: var(--text-color);
-  padding: 10px;
+  padding: 20px 0;
   width: 100%;
 }
 .testitem:hover {
@@ -23,5 +25,8 @@
   cursor: pointer;
 
   transition: all 0.2s ease-in-out;
+}
+.text {
+  padding: 0 20px;
 }
 </style>

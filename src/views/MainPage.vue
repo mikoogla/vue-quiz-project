@@ -11,11 +11,11 @@ import TestList from "../components/MainPage/TestList.vue";
 <script></script>
 <style scoped>
 .q-container {
+  max-height: calc(100vh - 64px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
 }
 .quizList {
   width: 30%;
@@ -27,7 +27,7 @@ import TestList from "../components/MainPage/TestList.vue";
 @media (max-width: 768px) {
   .q-container {
     flex-direction: column;
-    height: 100%;
+    max-height: calc(100vh - 64px);
   }
   .quizList {
     width: 100%;

@@ -34,7 +34,17 @@ export default {
 .questList {
   background-color: var(--background-color);
   filter: brightness(1.1);
-  padding: 20px;
-  height: 100%;
+  height: calc(100vh - 64px);
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .questList {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>

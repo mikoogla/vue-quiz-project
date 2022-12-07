@@ -13,6 +13,11 @@ import Button from "../../UI/Button.vue";
 
     <div class="items">
       <TestItem v-for="test in tests">{{ test.title }}</TestItem>
+      <TestItem v-for="test in tests">{{ test.title }}</TestItem>
+      <TestItem v-for="test in tests">{{ test.title }}</TestItem>
+      <TestItem v-for="test in tests">{{ test.title }}</TestItem>
+      <TestItem v-for="test in tests">{{ test.title }}</TestItem>
+      <TestItem v-for="test in tests">{{ test.title }}</TestItem>
     </div>
     <Button @click="importTests">import Tests</Button>
   </div>
@@ -44,7 +49,7 @@ Button {
 .testList {
   background-color: var(--background-color);
   padding: 20px;
-  height: 100%;
+  height: calc(100vh - 64px);
 }
 .searchBar {
   width: 100%;
@@ -67,6 +72,7 @@ Button {
 }
 @media (max-width: 768px) {
   .testList {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

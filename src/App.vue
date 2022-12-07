@@ -47,18 +47,19 @@ footer {
 .app-container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 .nav-and-content {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 .backgroundImg {
   background-image: url("./assets/backImage.png");
   background-position: center;
 }
 .content {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .main {
