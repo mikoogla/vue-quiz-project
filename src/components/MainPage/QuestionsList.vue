@@ -1,8 +1,31 @@
-<script setup></script>
+<script setup>
+import { mapGetters, mapActions } from "vuex";
+</script>
 <template>
-  <div class="questList">Questions list</div>
+  <div class="questList">
+    <button @click="importQuestions">Click</button>
+    <div v-for="question in questions" class="item">
+      Q: {{ question.title }}
+    </div>
+  </div>
 </template>
-<script></script>
+<script>
+export default {
+  computed: {
+    ...mapGetters("questionsModule", {
+      questions: "getQuestions",
+    }),
+  },
+  methods: {
+    somemethod() {
+      console.log("some method");
+    },
+    ...mapActions("questionsModule", {
+      importQuestions: "importQuestions",
+    }),
+  },
+};
+</script>
 <style scoped>
 .questList {
   background-color: #383636;

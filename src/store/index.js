@@ -9,13 +9,11 @@ import testsModule from "./modules/tests/index.js";
 
 const store = createStore({
   modules: {
-    questions: questionsModule,
-    tests: testsModule,
+    questionsModule: questionsModule,
+    testsModule: testsModule,
   },
   state() {
-    return {
-      count: 0,
-    };
+    return {};
   },
   mutations: mutations,
   actions: actions,

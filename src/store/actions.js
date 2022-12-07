@@ -1,1 +1,5 @@
-export default {};
+export default {
+  doNothing(_) {
+    console.log("doNothing");
+  },
+};
