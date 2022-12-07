@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar.vue";
 
 <template>
   <!-- todo: background img in dynamic class based on router path -->
-  <div class="main backgroundImg">
+  <div class="main" :class="{ backgroundImg: path === '/landing' }">
     <header>
       <Navbar />
     </header>
@@ -19,7 +19,24 @@ import Navbar from "./components/Navbar.vue";
     <p>Copyright mikoogla 2022</p>
   </footer>
 </template>
-
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      path: this.$router.path,
+    };
+  },
+  computed: {
+    path() {
+      return this.$route.path;
+    },
+  },
+  mounted() {
+    console.log(this.$route.path);
+  },
+};
+</script>
 <style scoped>
 footer {
   background-color: var(--background-color);
@@ -44,6 +61,5 @@ main {
 .content {
   width: 100%;
   height: 100%;
-  background-color: var(--background-color);
 }
 </style>
