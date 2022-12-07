@@ -4,7 +4,8 @@ import Navbar from "./components/Navbar.vue";
 </script>
 
 <template>
-  <div class="main">
+  <!-- todo: background img in dynamic class based on router path -->
+  <div class="main backgroundImg">
     <header>
       <Navbar />
     </header>
@@ -30,6 +31,10 @@ footer {
 main {
   flex: 1;
 }
+.backgroundImg {
+  background-image: url("./assets/backImage.png");
+  background-position: center;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -42,4 +47,3 @@ main {
   background-color: var(--background-color);
 }
 </style>
-<!--  -->

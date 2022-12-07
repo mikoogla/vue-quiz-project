@@ -26,10 +26,7 @@ h1 {
 .main {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/backImage.png");
-  background-color: var(--background-color);
-  background-position: center;
-  filter: brightness(0.8);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

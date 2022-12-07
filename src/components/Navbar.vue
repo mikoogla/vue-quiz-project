@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="main">
+  <div class="nav-main">
     <ul className="flexRow">
       Navbar
       <li><RouterLink to="/">Home</RouterLink></li>
@@ -19,7 +19,7 @@ li {
   list-style-type: none;
   margin: 0px 10px;
 }
-.main {
+.nav-main {
   overflow: hidden;
   width: 100%;
   max-height: 4rem;
@@ -29,14 +29,15 @@ li {
   border-radius: 0px 0px 22px 22px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: space-between;
 }
 .flexRow {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: space-between;
   padding: 20px;
   margin: 0px;
 }
