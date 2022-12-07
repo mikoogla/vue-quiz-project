@@ -1,14 +1,38 @@
 <script setup></script>
 
 <template>
-  <div class="testitem">
-    <div class="text">
-      <slot>No name</slot>
-    </div>
+  <div
+    class="testitem"
+    :class="{ selected: isSelected }"
+    :style="{ borderColor: test.color }"
+    @click="selectTest"
+  >
+    <div class="text">{{ test.title }}</div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "TestItem",
+  data() {
+    return {
+      isSelected: false,
+    };
+  },
+  props: {
+    test: {
+      type: Object,
+      required: true,
+    },
+  },
+  methods: {
+    selectTest() {
+      // this.$emit("selectTest", this.test);
+      this.isSelected = !this.isSelected;
+    },
+  },
+};
+</script>
 
 <style scoped>
 .testitem {
@@ -19,6 +43,11 @@
   color: var(--text-color);
   padding: 20px 0;
   width: 100%;
+}
+.selected {
+  border: 1px solid #5e8aa7;
+  border-radius: 15px;
+  filter: brightness(2);
 }
 .testitem:hover {
   filter: brightness(1.5);

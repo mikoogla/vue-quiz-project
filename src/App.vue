@@ -6,25 +6,19 @@ import Navbar from "./components/Navbar.vue";
 <template>
   <!-- todo: background img in dynamic class based on router path -->
   <div class="app-container">
-    <div
-      class="nav-and-content"
-      :class="{ backgroundImg: path === '/landing' }"
-    >
-      <Navbar />
-      <RouterView class="content" />
-    </div>
-    <footer>
+    <div :class="{ background: path === '/landing' }"></div>
+    <Navbar class="navbar" />
+    <RouterView class="content" />
+    <div class="footer">
       <p>Copyright mikoogla 2022</p>
-    </footer>
+    </div>
   </div>
 </template>
 <script>
 export default {
   name: "App",
   data() {
-    return {
-      path: this.$router.path,
-    };
+    return {};
   },
   computed: {
     path() {
@@ -47,25 +41,32 @@ footer {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
-.nav-and-content {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.backgroundImg {
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-image: url("./assets/backImage.png");
   background-position: center;
 }
-.content {
-  /* height: 100vh; */
+.navbar {
+  position: fixed;
+  height: var(--navigation-height);
+  width: 100%;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
+.content {
+  margin-top: calc(var(--navigation-height) + 3px);
+  height: calc(100vh - var(--navigation-height));
+}
+.footer {
+  height: var(--navigation-height);
+  filter: brightness(1.1);
   width: 100%;
-  height: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

@@ -4,42 +4,40 @@ import TestList from "../components/MainPage/TestList.vue";
 </script>
 <template>
   <div class="q-container">
-    <div class="quizList"><TestList /></div>
-    <div class="quizContent"><QuestionsList /></div>
+    <div class="testsList"><TestList /></div>
+    <div class="questionsList"><QuestionsList /></div>
   </div>
 </template>
 <script></script>
 <style scoped>
 .q-container {
-  max-height: calc(100vh - 64px);
+  /* padding: 20px 20px 0 20px; */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
 }
-.quizList {
-  width: 30%;
+.testsList {
+  overflow-y: auto;
+  width: 35%;
+  padding: 20px;
 }
-.quizContent {
-  width: 70%;
+.questionsList {
+  overflow-y: auto;
+  width: 65%;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
   .q-container {
     flex-direction: column;
-    max-height: calc(100vh - 64px);
+    justify-content: center;
+    align-items: center;
   }
-  .quizList {
-    width: 100%;
-  }
-  .quizContent {
-    width: 100%;
-    height: 100%;
+  .testsList,
+  .questionsList {
+    width: 80%;
   }
   .quizContent,
   .quizList {
-    margin-bottom: 20px;
-    justify-content: center;
   }
 }
 </style>

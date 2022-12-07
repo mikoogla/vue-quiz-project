@@ -5,15 +5,9 @@ import TestItem from "./TestItem.vue";
 <template>
   <div class="questList">
     <button @click="importQuestions">Get questions</button>
-    <TestItem v-for="question in questions" class="item">
+    <!-- <TestItem v-for="question in questions" class="item">
       Q: {{ question.title }}
-    </TestItem>
-    <TestItem v-for="question in questions" class="item">
-      Q: {{ question.title }}
-    </TestItem>
-    <TestItem v-for="question in questions" class="item">
-      Q: {{ question.title }}
-    </TestItem>
+    </TestItem> -->
   </div>
 </template>
 <script>
@@ -32,19 +26,10 @@ export default {
 </script>
 <style scoped>
 .questList {
-  background-color: var(--background-color);
-  filter: brightness(1.1);
-  height: calc(100vh - 64px);
-  padding: 0 20px;
 }
 
 @media (max-width: 768px) {
   .questList {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 </style>
