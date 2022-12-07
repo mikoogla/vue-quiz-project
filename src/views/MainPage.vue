@@ -17,8 +17,29 @@ import TestList from "../components/MainPage/TestList.vue";
   width: 100%;
   height: 100%;
 }
-.quizList,
+.quizList {
+  width: 30%;
+}
 .quizContent {
-  width: 100%;
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .q-container {
+    flex-direction: column;
+    height: 100%;
+  }
+  .quizList {
+    width: 100%;
+  }
+  .quizContent {
+    width: 100%;
+    height: 100%;
+  }
+  .quizContent,
+  .quizList {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
 }
 </style>

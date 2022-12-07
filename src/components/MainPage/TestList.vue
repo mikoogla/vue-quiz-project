@@ -1,6 +1,11 @@
 <script setup></script>
 <template>
-  <div class="testList">Tests list</div>
+  <div class="testList">
+    <div class="searchBar">
+      <input type="text" placeholder="Search" />
+    </div>
+    <div class="list">List of tests here</div>
+  </div>
 </template>
 <script></script>
 <style scoped>

@@ -73,18 +73,21 @@ const tests = [
     title: "Vue.js Quiz",
     description: "This is a quiz about Vue.js",
     questions: [1, 2, 3, 4, 5, 6, 7],
+    color: "green",
   },
   {
     id: 2,
     title: "Capital Cities Quiz",
     description: "This is a quiz about capital cities",
     questions: [1, 4, 8, 9, 10],
+    color: "blue",
   },
   {
     id: 3,
     title: "Programming Languages Quiz",
     description: "This is a quiz about programming languages",
     questions: [7],
+    color: "red",
   },
 ];
 
