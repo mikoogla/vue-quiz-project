@@ -1,4 +1,4 @@
 <script setup></script>
-<template>ContactPage</template>
+<template><div>ContactPage</div></template>
 <script></script>
 <style scoped></style>

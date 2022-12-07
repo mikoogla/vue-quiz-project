@@ -2,7 +2,7 @@
 import Overlay from "../components/LandingPage/Overlay.vue";
 </script>
 <template>
-  <div class="main">
+  <div class="lp-main">
     <div class="title">
       <h1>Any questions?</h1>
     </div>
@@ -14,29 +14,28 @@ import Overlay from "../components/LandingPage/Overlay.vue";
 h1 {
   font-size: 4rem;
   font-weight: 400;
-  margin: 50px;
+  margin: 0;
 }
 .overlay-container {
   width: 100%;
-  height: 50%;
-  bottom: 0px;
   color: var(--background-color);
-  overflow: hidden;
 }
-.main {
+.lp-main {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: space-between;
 }
 .title {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+
+  align-items: center;
+  padding-left: 50px;
+  overflow: hidden;
 }
 </style>

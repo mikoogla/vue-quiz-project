@@ -5,19 +5,18 @@ import Navbar from "./components/Navbar.vue";
 
 <template>
   <!-- todo: background img in dynamic class based on router path -->
-  <div class="main" :class="{ backgroundImg: path === '/landing' }">
-    <header>
+  <div class="app-container">
+    <div
+      class="nav-and-content"
+      :class="{ backgroundImg: path === '/landing' }"
+    >
       <Navbar />
-    </header>
-    <main>
-      <div class="content">
-        <RouterView />
-      </div>
-    </main>
+      <RouterView class="content" />
+    </div>
+    <footer>
+      <p>Copyright mikoogla 2022</p>
+    </footer>
   </div>
-  <footer>
-    <p>Copyright mikoogla 2022</p>
-  </footer>
 </template>
 <script>
 export default {
@@ -45,20 +44,26 @@ footer {
   text-align: center;
   padding: 0.5rem;
 }
-main {
-  flex: 1;
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+.nav-and-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 .backgroundImg {
   background-image: url("./assets/backImage.png");
   background-position: center;
 }
+.content {
+  height: 100vh;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100vh;
-}
-.content {
   width: 100%;
   height: 100%;
 }

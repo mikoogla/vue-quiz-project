@@ -12,7 +12,7 @@
 <script></script>
 <style scoped>
 a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
 }
 li {
@@ -20,6 +20,7 @@ li {
   margin: 0px 10px;
 }
 .nav-main {
+  z-index: 1;
   overflow: hidden;
   width: 100%;
   max-height: 4rem;

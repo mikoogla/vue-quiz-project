@@ -1,4 +1,4 @@
 <script setup></script>
-<template>Main quiz page</template>
+<template><div>Main quiz page</div></template>
 <script></script>
 <style scoped></style>
