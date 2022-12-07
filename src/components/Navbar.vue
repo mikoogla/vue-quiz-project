@@ -24,8 +24,12 @@ li {
   max-height: 4rem;
   background-color: var(--background-color);
   color: var(--text-color);
-  border-bottom: 8px outset #1c6ea4;
+  border-bottom: 2px outset var(--accent-color);
   border-radius: 0px 0px 22px 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
 }
 .flexRow {
   display: flex;

@@ -2,8 +2,9 @@
   --background-color: #1a1a1a;
   --text-color: #ffffff;
   --accent-color: #f0bf72;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 /* 
 :root {
