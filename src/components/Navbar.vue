@@ -20,10 +20,10 @@ li {
   margin: 0px 10px;
 }
 .nav-main {
-  z-index: 1;
+  height: 4rem;
+  z-index: 2;
   overflow: hidden;
   width: 100%;
-  max-height: 4rem;
   background-color: var(--background-color);
   color: var(--text-color);
   border-bottom: 2px outset var(--accent-color);

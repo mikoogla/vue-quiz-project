@@ -1,4 +1,9 @@
 <script setup></script>
-<template><div>Main quiz page</div></template>
+<template>
+  <div class="q-container">
+    <div class="quizList">List of tests</div>
+    <div class="quizContent">Questions</div>
+  </div>
+</template>
 <script></script>
 <style scoped></style>
