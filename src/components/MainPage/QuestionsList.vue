@@ -1,12 +1,19 @@
 <script setup>
 import { mapGetters, mapActions } from "vuex";
+import TestItem from "./TestItem.vue";
 </script>
 <template>
   <div class="questList">
     <button @click="importQuestions">Get questions</button>
-    <div v-for="question in questions" class="item">
+    <TestItem v-for="question in questions" class="item">
       Q: {{ question.title }}
-    </div>
+    </TestItem>
+    <TestItem v-for="question in questions" class="item">
+      Q: {{ question.title }}
+    </TestItem>
+    <TestItem v-for="question in questions" class="item">
+      Q: {{ question.title }}
+    </TestItem>
   </div>
 </template>
 <script>
@@ -25,7 +32,8 @@ export default {
 </script>
 <style scoped>
 .questList {
-  background-color: #383636;
+  background-color: var(--background-color);
+  filter: brightness(1.1);
   padding: 20px;
   height: 100%;
 }
