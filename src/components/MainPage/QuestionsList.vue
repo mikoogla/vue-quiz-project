@@ -3,7 +3,7 @@ import { mapGetters, mapActions } from "vuex";
 </script>
 <template>
   <div class="questList">
-    <button @click="importQuestions">Click</button>
+    <button @click="importQuestions">Get questions</button>
     <div v-for="question in questions" class="item">
       Q: {{ question.title }}
     </div>
@@ -17,9 +17,6 @@ export default {
     }),
   },
   methods: {
-    somemethod() {
-      console.log("some method");
-    },
     ...mapActions("questionsModule", {
       importQuestions: "importQuestions",
     }),
