@@ -8,9 +8,6 @@
       <div class="burger" @click="toggleMenu">
         <img src="../assets/burger.png" alt="logo" width="30" />
       </div>
-      <!-- <li><RouterLink to="/">Home</RouterLink></li>
-      <li><RouterLink to="/quiz">Main</RouterLink></li>
-      <li><RouterLink to="/contact">Contact</RouterLink></li> -->
     </ul>
   </div>
 </template>

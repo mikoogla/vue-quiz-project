@@ -32,11 +32,10 @@ export default {
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
-      console.log("toggle menu");
     },
   },
   mounted() {
-    console.log(this.$route.path);
+    // console.log(this.$route.path);
   },
 };
 </script>

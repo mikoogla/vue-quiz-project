@@ -1,12 +1,26 @@
+<script setup>
+import vClickOutside from "v-click-outside";
+</script>
 <template>
-  <div @click="this.$emit('toggleMenu')" class="menu-container">
+  <div @click="toggleMenu" class="menu-container">
     <h1>Menu</h1>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/quiz">Main</RouterLink>
     <RouterLink to="/contact">Contact</RouterLink>
   </div>
 </template>
-
+<script>
+export default {
+  directives: {
+    clickOutside: vClickOutside.directive,
+  },
+  methods: {
+    toggleMenu() {
+      this.$emit("toggleMenu");
+    },
+  },
+};
+</script>
 <style scoped>
 a {
   color: var(--text-color);

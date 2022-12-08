@@ -8,15 +8,21 @@
 
 <style scoped>
 input {
-  background-color: var(--background-color);
-  filter: contrast(0.8);
-  color: var(--text-color);
+  font-size: 1.1rem;
+  appearance: none;
+  outline: none;
   border: none;
-  border-radius: 5px;
-  padding: 10px;
+  border-bottom: 2px outset var(--accent-color);
+  background-color: var(--background-color);
+  filter: contrast(0.9);
+  color: var(--text-color);
+  border-radius: 0px 0px 15px 15px;
+  padding: 15px;
   width: 80%;
+  transition: all 0.2s ease-in-out;
 }
 input:focus {
-  outline: 1px solid var(--accent-color);
+  border-radius: 0px;
+  outline: none;
 }
 </style>

@@ -7,12 +7,22 @@ import Button from "../../UI/Button.vue";
 <template>
   <div class="testList">
     <div class="searchBar">
-      <Input type="text" placeholder="Search" id="input-style" />
+      <Input
+        type="text"
+        placeholder="Search"
+        id="input-style"
+        v-model="searchQuery"
+        @input="searchQuery = $event.target.value"
+      />
     </div>
-    <div class="list"><h2>Available tests</h2></div>
+    <div class="list">
+      <h2 v-if="filteredTests.length !== 0 && searchQuery">Results</h2>
+      <h2 v-else-if="filteredTests.length !== 0">All tests</h2>
+      <h2 v-if="filteredTests.length === 0">No results</h2>
+    </div>
 
     <div class="items">
-      <TestItem :test="test" v-for="test in tests" />
+      <TestItem :test="test" v-for="test in filteredTests" />
     </div>
   </div>
 </template>
@@ -24,12 +34,23 @@ export default {
   data() {
     return {
       search: "",
+      searchQuery: "",
     };
   },
   computed: {
     ...mapGetters("testsModule", {
       tests: "getTests",
     }),
+    filteredTests() {
+      if (!this.searchQuery || this.searchQuery === "") {
+        return this.tests;
+      }
+      return this.tests.filter((test) => {
+        return test.title
+          .toLowerCase()
+          .includes(this.searchQuery.toLowerCase());
+      });
+    },
   },
   methods: {
     ...mapActions("testsModule", {
