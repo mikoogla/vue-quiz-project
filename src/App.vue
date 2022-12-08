@@ -1,13 +1,15 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import Navbar from "./components/Navbar.vue";
+import Menu from "./components/Menu.vue";
 </script>
 
 <template>
   <!-- todo: background img in dynamic class based on router path -->
   <div class="app-container">
     <div :class="{ background: path === '/landing' }"></div>
-    <Navbar class="navbar" />
+    <Menu @toggle-menu="toggleMenu" v-if="menuOpen" />
+    <Navbar @toggle-menu="toggleMenu" class="navbar" />
     <RouterView class="content" />
     <div class="footer">
       <p>Copyright mikoogla 2022</p>
@@ -18,11 +20,19 @@ import Navbar from "./components/Navbar.vue";
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      menuOpen: false,
+    };
   },
   computed: {
     path() {
       return this.$route.path;
+    },
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+      console.log("toggle menu");
     },
   },
   mounted() {

@@ -9,7 +9,7 @@ export default {
   },
   selectQuestion(context, payload) {
     //payload should be question id
-    console.log("pushing: " + payload);
+    // console.log("pushing: " + payload);
     context.commit("pushQuestion", context.getters.getQuestionById(payload));
   },
   resetQuestions(context) {

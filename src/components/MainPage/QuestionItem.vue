@@ -58,10 +58,8 @@ export default {
 .answer {
   background-color: var(--background-color);
   color: var(--text-color);
-  border: 1px solid var(--text-color);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+  border-bottom: 1px solid var(--text-color);
+  padding: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -72,13 +70,13 @@ export default {
 
 .correct {
   background-color: var(--correct-color);
-  border: 0.5px solid #00ff005e;
+  border-bottom: 0.5px solid #00ff005e;
   color: var(--text-color);
 }
 
 .wrong {
   background-color: var(--wrong-color);
-  border: 0.5px solid #ff000069;
+  border-bottom: 0.5px solid #ff000069;
   color: var(--text-color);
 }
 </style>

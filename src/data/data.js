@@ -85,7 +85,7 @@ const questions = [
       "Use a hash",
       "Use a rainbow table",
     ],
-    answer: "Sydney",
+    answer: "Try all possible combinations",
   },
   {
     id: 13,
