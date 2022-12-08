@@ -1,11 +1,13 @@
-<script setup></script>
+<script setup>
+import { mapGetters, mapActions } from "vuex";
+</script>
 
 <template>
   <div
     class="testitem"
-    :class="{ selected: isSelected }"
+    :class="{ selected: test.id === getSelectedTest.id }"
     :style="{ borderColor: test.color }"
-    @click="selectTest"
+    @click="selectTest(test)"
   >
     <div class="text">{{ test.title }}</div>
   </div>
@@ -15,9 +17,7 @@
 export default {
   name: "TestItem",
   data() {
-    return {
-      isSelected: false,
-    };
+    return {};
   },
   props: {
     test: {
@@ -26,11 +26,16 @@ export default {
     },
   },
   methods: {
-    selectTest() {
-      // this.$emit("selectTest", this.test);
-      this.isSelected = !this.isSelected;
-    },
+    ...mapActions("testsModule", {
+      selectTest: "selectTest",
+    }),
   },
+  computed: {
+    ...mapGetters("testsModule", {
+      getSelectedTest: "getSelectedTest",
+    }),
+  },
+  watch: {},
 };
 </script>
 

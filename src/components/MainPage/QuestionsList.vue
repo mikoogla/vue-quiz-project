@@ -25,11 +25,6 @@ export default {
 };
 </script>
 <style scoped>
-.questList {
-}
-
 @media (max-width: 768px) {
-  .questList {
-  }
 }
 </style>

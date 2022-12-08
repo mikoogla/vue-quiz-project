@@ -5,6 +5,10 @@ export default {
     console.log("importing Tests");
     setTimeout(() => {
       context.commit("setTests", tests);
-    }, 3000);
+    }, 200);
+  },
+  selectTest(context, payload) {
+    console.log("selecting Test " + payload.title);
+    context.commit("setSelectedTest", payload);
   },
 };

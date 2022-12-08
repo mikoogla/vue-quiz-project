@@ -1,11 +1,16 @@
 <script setup>
 import QuestionsList from "../components/MainPage/QuestionsList.vue";
 import TestList from "../components/MainPage/TestList.vue";
+import SelectedTestItem from "../components/MainPage/SelectedTestItem.vue";
 </script>
 <template>
   <div class="q-container">
     <div class="testsList"><TestList /></div>
-    <div class="questionsList"><QuestionsList /></div>
+    <div class="selectedTest">
+      <h1>Selected test</h1>
+      <SelectedTestItem />
+      <QuestionsList />
+    </div>
   </div>
 </template>
 <script></script>
@@ -20,7 +25,7 @@ import TestList from "../components/MainPage/TestList.vue";
   width: 35%;
   padding: 20px;
 }
-.questionsList {
+.selectedTest {
   overflow-y: auto;
   width: 65%;
   padding: 20px;
@@ -33,11 +38,8 @@ import TestList from "../components/MainPage/TestList.vue";
     align-items: center;
   }
   .testsList,
-  .questionsList {
+  .selectedTest {
     width: 80%;
-  }
-  .quizContent,
-  .quizList {
   }
 }
 </style>

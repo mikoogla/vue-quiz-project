@@ -5,6 +5,6 @@ export default {
     console.log("importing Questions");
     setTimeout(() => {
       context.commit("setQuestions", questions);
-    }, 3000);
+    }, 200);
   },
 };

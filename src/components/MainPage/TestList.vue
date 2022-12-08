@@ -41,10 +41,6 @@ Button {
   background-color: var(--accent-color);
   color: var(--background-color);
 }
-.testList {
-}
-.searchBar {
-}
 .items {
   display: flex;
   flex-direction: column;
@@ -54,9 +50,5 @@ Button {
   margin: 4rem 0;
 }
 @media (max-width: 768px) {
-  .testList {
-  }
-  .searchBar {
-  }
 }
 </style>
