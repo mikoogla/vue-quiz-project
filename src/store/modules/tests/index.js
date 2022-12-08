@@ -7,7 +7,7 @@ export default {
   state() {
     return {
       tests: [],
-      selectedTest: null,
+      selectedTest: "",
     };
   },
   mutations: mutations,

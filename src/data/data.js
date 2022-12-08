@@ -65,6 +65,17 @@ const questions = [
     options: ["Port Moresby", "Lae", "Madang", "Mount Hagen"],
     answer: "Port Moresby",
   },
+  {
+    id: 11,
+    title: "What computed is for in Vue.js?",
+    options: [
+      "To bind data",
+      "To bind events",
+      "To bind data and events",
+      "To bind data and events with two-way binding",
+    ],
+    answer: "To bind data and events with two-way binding",
+  },
 ];
 
 const tests = [
@@ -72,7 +83,7 @@ const tests = [
     id: 1,
     title: "Vue.js Quiz",
     description: "This is a quiz about Vue.js",
-    questions: [1, 2, 3, 4, 5, 6, 7],
+    questions: [1, 2, 3, 4, 5, 6, 7, 11],
     color: "green",
   },
   {

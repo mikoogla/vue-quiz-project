@@ -35,7 +35,6 @@ export default {
       getSelectedTest: "getSelectedTest",
     }),
   },
-  watch: {},
 };
 </script>
 
