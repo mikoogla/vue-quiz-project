@@ -34,9 +34,11 @@ import SelectedTestItem from "../components/MainPage/SelectedTestItem.vue";
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
   }
   .testsList,
   .selectedTest {
+    background-color: #141414;
     width: 80%;
   }
 }

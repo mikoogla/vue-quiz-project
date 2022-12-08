@@ -14,7 +14,6 @@ import Button from "../../UI/Button.vue";
     <div class="items">
       <TestItem :test="test" v-for="test in tests" />
     </div>
-    <Button @click="importTests">import Tests</Button>
   </div>
 </template>
 <script>
