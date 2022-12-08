@@ -8,7 +8,8 @@
 
 <style scoped>
 input {
-  background-color: #383636;
+  background-color: var(--background-color);
+  filter: contrast(0.8);
   color: var(--text-color);
   border: none;
   border-radius: 5px;

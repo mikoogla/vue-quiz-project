@@ -38,7 +38,9 @@ import SelectedTestItem from "../components/MainPage/SelectedTestItem.vue";
   }
   .testsList,
   .selectedTest {
-    background-color: #141414;
+    background-color: var(--background-color);
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.404)); */
+    border: 0.5px solid rgba(255, 255, 255, 0.171);
     width: 80%;
     min-height: 300px;
   }

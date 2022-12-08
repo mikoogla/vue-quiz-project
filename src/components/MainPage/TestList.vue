@@ -51,6 +51,12 @@ Button {
   gap: 20px;
   margin: 4rem 0;
 }
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
 @media (max-width: 768px) {
 }
 </style>

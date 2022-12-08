@@ -1,8 +1,10 @@
 :root {
-  --background-color: #1a1a1a;
+  --background-color: #141418;
   --text-color: #c0c0c0;
   --accent-color: #f0bf72;
   --button-color: #f0bf72;
+  --wrong-color: #33000067;
+  --correct-color: #001f0077;
   --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;

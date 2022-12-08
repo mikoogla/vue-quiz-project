@@ -147,7 +147,7 @@ const tests = [
     id: 1,
     title: "Vue.js Quiz",
     description: "This is a quiz about Vue.js",
-    questions: [1, 2, 3, 4, 5, 6, 7, 11],
+    questions: [2, 3, 4, 5, 6, 7, 11],
     color: "#FF004F",
   },
   {

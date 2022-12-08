@@ -71,14 +71,14 @@ export default {
 }
 
 .correct {
-  background-color: #063106;
-  border: 1px solid #00ff00;
+  background-color: var(--correct-color);
+  border: 0.5px solid #00ff005e;
   color: var(--text-color);
 }
 
 .wrong {
-  background-color: #380101;
-  border: 1px solid #ff0000;
+  background-color: var(--wrong-color);
+  border: 0.5px solid #ff000069;
   color: var(--text-color);
 }
 </style>
