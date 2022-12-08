@@ -7,4 +7,12 @@ export default {
       context.commit("setQuestions", questions);
     }, 200);
   },
+  selectQuestion(context, payload) {
+    //payload should be question id
+    console.log("pushing: " + payload);
+    context.commit("pushQuestion", context.getters.getQuestionById(payload));
+  },
+  resetQuestions(context) {
+    context.commit("resetQuestions");
+  },
 };

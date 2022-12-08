@@ -7,9 +7,7 @@ import SelectedTestItem from "../components/MainPage/SelectedTestItem.vue";
   <div class="q-container">
     <div class="testsList"><TestList /></div>
     <div class="selectedTest">
-      <h1>Selected test</h1>
       <SelectedTestItem />
-      <QuestionsList />
     </div>
   </div>
 </template>

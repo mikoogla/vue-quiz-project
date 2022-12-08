@@ -1,20 +1,20 @@
 <script setup>
 import { mapGetters, mapActions } from "vuex";
-import TestItem from "./TestItem.vue";
+import QuestionItem from "./QuestionItem.vue";
 </script>
 <template>
   <div class="questList">
-    <button @click="importQuestions">Get questions</button>
-    <!-- <TestItem v-for="question in questions" class="item">
-      Q: {{ question.title }}
-    </TestItem> -->
+    <button @click="importQuestions">Import questions</button>
+    <QuestionItem v-for="q in selectedQuestions" class="item">
+      {{ q !== undefined && q.title !== undefined ? q.title : "No question" }}
+    </QuestionItem>
   </div>
 </template>
 <script>
 export default {
   computed: {
     ...mapGetters("questionsModule", {
-      questions: "getQuestions",
+      selectedQuestions: "getSelectedQuestions",
     }),
   },
   methods: {
@@ -22,6 +22,7 @@ export default {
       importQuestions: "importQuestions",
     }),
   },
+  components: { QuestionItem },
 };
 </script>
 <style scoped>

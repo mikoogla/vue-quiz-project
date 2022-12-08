@@ -7,7 +7,7 @@ import { mapGetters, mapActions } from "vuex";
     class="testitem"
     :class="{ selected: test.id === getSelectedTest.id }"
     :style="{ borderColor: test.color }"
-    @click="selectTest(test)"
+    @click="chooseTest"
   >
     <div class="text">{{ test.title }}</div>
   </div>
@@ -29,6 +29,17 @@ export default {
     ...mapActions("testsModule", {
       selectTest: "selectTest",
     }),
+    ...mapActions("questionsModule", {
+      importQuestions: "importQuestions",
+      resetQuestions: "resetQuestions",
+      selectQuestion: "selectQuestion",
+    }),
+    chooseTest() {
+      this.selectTest(this.test);
+      this.importQuestions();
+      this.resetQuestions();
+      this.test.questions.map((q) => this.selectQuestion(q));
+    },
   },
   computed: {
     ...mapGetters("testsModule", {
