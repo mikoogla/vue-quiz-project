@@ -15,8 +15,8 @@ import Button from "./../../UI/Button.vue";
         <h3 v-show="getSelectedTest.title">{{ counter }} questions</h3>
       </div>
     </div>
-    <QuestionsList v-else />
-    <Button v-if="!started" @click="this.started = true">Start</Button>
+    <QuestionsList v-show="started" />
+    <Button v-if="!started && getSelectedTest" @click="startQuiz">Start</Button>
   </div>
 </template>
 
@@ -30,6 +30,9 @@ export default {
   },
   props: {},
   methods: {
+    startQuiz() {
+      this.started = true;
+    },
     ...mapActions("questionsModule", {
       selectQuestion: "selectQuestion",
       resetQuestions: "resetQuestions",
@@ -45,7 +48,9 @@ export default {
   },
   watch: {
     getSelectedTest() {
+      console.log("getSelectedTest changed");
       this.started = false;
+      return this.getSelectedTest || {};
     },
   },
   components: { QuestionsList },

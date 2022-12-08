@@ -1,3 +1,7 @@
+<script setup>
+import { mapGetters } from "vuex";
+</script>
+
 <template>
   <div class="w">
     <h2>{{ question.title }}</h2>
@@ -43,7 +47,6 @@ export default {
       this.reveal = true;
       if (this.answered === true) return;
       this.answered = true;
-      console.log("selected answer: " + answer);
       if (answer === this.question.answer) {
         this.goodAnswer = true;
       } else {
@@ -51,6 +54,24 @@ export default {
       }
     },
   },
+  computed: {
+    ...mapGetters("questionsModule", {
+      selectedQuestions: "getSelectedQuestions",
+      resetQuestions: "resetQuestions",
+    }),
+    ...mapGetters("testsModule", {
+      getSelectedTest: "getSelectedTest",
+    }),
+  },
+  watch: {
+    question() {
+      this.reveal = false;
+      this.answered = false;
+      this.goodAnswer = false;
+    },
+  },
+  updated() {},
+  unmounted() {},
 };
 </script>
 

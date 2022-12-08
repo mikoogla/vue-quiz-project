@@ -1,5 +1,5 @@
 <script setup>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters } from "vuex";
 import QuestionItem from "./QuestionItem.vue";
 </script>
 <template>
@@ -16,13 +16,13 @@ export default {
   computed: {
     ...mapGetters("questionsModule", {
       selectedQuestions: "getSelectedQuestions",
+      resetQuestions: "resetQuestions",
+    }),
+    ...mapGetters("testsModule", {
+      getSelectedTest: "getSelectedTest",
     }),
   },
-  methods: {
-    ...mapActions("questionsModule", {
-      importQuestions: "importQuestions",
-    }),
-  },
+  methods: {},
   components: { QuestionItem },
 };
 </script>
