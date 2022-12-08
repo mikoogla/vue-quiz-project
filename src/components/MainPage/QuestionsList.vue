@@ -4,10 +4,11 @@ import QuestionItem from "./QuestionItem.vue";
 </script>
 <template>
   <div class="questList">
-    <button @click="importQuestions">Import questions</button>
-    <QuestionItem v-for="q in selectedQuestions" class="item">
-      {{ q !== undefined && q.title !== undefined ? q.title : "No question" }}
-    </QuestionItem>
+    <QuestionItem
+      v-for="q in selectedQuestions"
+      class="item"
+      :question="q || {}"
+    />
   </div>
 </template>
 <script>

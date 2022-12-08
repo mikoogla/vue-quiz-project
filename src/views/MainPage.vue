@@ -40,6 +40,7 @@ import SelectedTestItem from "../components/MainPage/SelectedTestItem.vue";
   .selectedTest {
     background-color: #141414;
     width: 80%;
+    min-height: 300px;
   }
 }
 </style>

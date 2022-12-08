@@ -18,6 +18,9 @@ import Button from "../../UI/Button.vue";
 </template>
 <script>
 export default {
+  mounted() {
+    this.importTests();
+  },
   data() {
     return {
       search: "",

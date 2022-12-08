@@ -1,18 +1,22 @@
 <script setup>
 import { mapActions, mapGetters } from "vuex";
 import QuestionsList from "./QuestionsList.vue";
+import Button from "./../../UI/Button.vue";
 </script>
 
 <template>
   <div class="selectedtest">
-    <h1>{{ getSelectedTest.title || "No test selected" }}</h1>
-    <div class="description">
-      <h2>{{ getSelectedTest.description }}</h2>
+    <div v-if="!started">
+      <h1>{{ getSelectedTest.title || "No test selected" }}</h1>
+      <div class="description">
+        <h2>{{ getSelectedTest.description }}</h2>
+      </div>
+      <div class="count">
+        <h3 v-show="getSelectedTest.title">{{ counter }} questions</h3>
+      </div>
     </div>
-    <div class="count">
-      <h3 v-show="getSelectedTest.title">{{ counter }} questions</h3>
-    </div>
-    <QuestionsList />
+    <QuestionsList v-else />
+    <Button v-if="!started" @click="this.started = true">Start</Button>
   </div>
 </template>
 
@@ -20,7 +24,9 @@ import QuestionsList from "./QuestionsList.vue";
 export default {
   name: "SelectedTestItem",
   data() {
-    return {};
+    return {
+      started: false,
+    };
   },
   props: {},
   methods: {
@@ -37,8 +43,22 @@ export default {
       counter: "getQuestionsCount",
     }),
   },
+  watch: {
+    getSelectedTest() {
+      this.started = false;
+    },
+  },
   components: { QuestionsList },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+Button {
+  background-color: var(--button-color);
+  color: var(--background-color);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
